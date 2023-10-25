@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
   return (
@@ -46,36 +48,36 @@ const Navbar = () => {
             </div>
             <div className="offcanvas-body ">
               <ul className="navbar-nav justify-content-start flex-grow-1 gap-4">
-                <li className="nav-item home">
-                  <a className="nav-link active" href="./Project.html">
+                <Link to="/" className="nav-link active">
+                  <li className="nav-item home1">
                     Home
-                  </a>
-                </li>
-                <li className="nav-item home1">
-                  <a className="nav-link active" href="./Product.html">
+                  </li>
+                </Link>
+                <Link to="/products" className="nav-link active">
+                  <li className="nav-item home1">
                     Product
-                  </a>
-                </li>
-                <li className="nav-item home1">
-                  <a className="nav-link active" href="./Cart.html">
+                  </li>
+                </Link>
+                <Link to="/cart" className="nav-link active">
+                  <li className="nav-item home1">
                     Cart
-                  </a>
-                </li>
-                <li className="nav-item home1">
-                  <a className="nav-link active" href="./Blog.html">
+                  </li>
+                </Link>
+                <Link to="/blog" className="nav-link active">
+                  <li className="nav-item home1">
                     Blog
-                  </a>
-                </li>
-                <li className="nav-item home1">
-                  <a className="nav-link active" href="./Contact.html">
+                  </li>
+                </Link>
+                <Link to="/contact" className="nav-link active">
+                  <li className="nav-item home1">
                     Contact
-                  </a>
-                </li>
+                  </li>
+                </Link>
               </ul>
             </div>
           </div>
           <div>
-            <ul className=" navicon p-0 mb-0 ">
+            <ul className="navicon p-0 mb-0 ">
               <li className="nav_icon">
                 <a href="#">
                   <i className="bi bi-search text-decoration-none"></i>

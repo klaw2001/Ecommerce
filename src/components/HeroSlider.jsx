@@ -3,7 +3,7 @@ import React from "react";
 const HeroSlider = () => {
   return (
     <>
-      <div className="container-fluid m-0 p-0">
+      <div className="container-fluid mt-5 m-0 p-0">
         <div
           id="carouselExampleFade"
           className="carousel slide carousel-fade"

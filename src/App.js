@@ -1,31 +1,31 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Header/Navbar';
-import HeroSlider from './components/HeroSlider';
-import ProductsRecommended from './components/ProductsRecommended';
-import ShopByCategories from './components/ShopByCategories';
-import FeaturedInfo from './components/FeaturedInfo';
-import NewArrivals from './components/NewArrivals';
-import ProductBanner from './components/ProductBanner';
-import Testimonial from './components/Testimonials';
-import AllProducts from './components/AllProducts';
-import OurBlog from './components/LatestNews';
+import Body from './components/Body/Body';
 import Footer from './components/Footer/Footer';
-// import (Browserrouter as Router )
+import './App.css'
+import Products from './components/Products';
+import Cart from './components/Cart';
+import Blog from './components/Blog';
+import Contact from './components/Contact';
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <HeroSlider />
-      <ProductsRecommended />
-      <ShopByCategories />
-      <FeaturedInfo />
-      <NewArrivals />
-      <ProductBanner />
-      <Testimonial />
-      <AllProducts />
-      <OurBlog />
-      <Footer />
+      <Router>
+        <div>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Body />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+            {/* Add more routes here */}
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
     </div>
   );
 }
