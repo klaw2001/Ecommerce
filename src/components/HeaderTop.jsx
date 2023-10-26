@@ -10,9 +10,9 @@ const HeaderTop = () => {
   ];
 
   const languageOptions = [
-    { value: 'en', label: 'English', flag: './Images/flag01.jpg' },
-    { value: 'ar', label: 'اللغة العربية', flag: './Images/flag02.jpg' },
-    { value: 'es', label: 'Spanish', flag: './Images/flag03.jpg' },
+    { value: 'en', label: 'English', flag: '/assets/images/flag01.jpg' },
+    { value: 'ar', label: 'اللغة العربية', flag: '/assets/images/flag02.jpg' },
+    { value: 'es', label: 'Spanish', flag: '/assets/images/flag03.jpg' },
   ];
 
   const toggleCurrencyDropdown = () => {
@@ -60,7 +60,7 @@ const HeaderTop = () => {
                   className="text-decoration-none"
                   onClick={toggleLanguageDropdown}
                 >
-                  <img src="./Images/flag01.jpg" alt="" />
+                  <img src="/assets/images/flag01.jpg" alt="" />
                   English
                   <i className={`bi bi-chevron-${languageDropdownOpen ? 'up' : 'down'}`}></i>
                 </button>

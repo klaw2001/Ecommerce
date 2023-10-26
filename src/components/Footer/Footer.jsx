@@ -170,7 +170,7 @@ const Footer = () => {
                     </p>
                   </div>
                   <div className="payment">
-                    <img src="./Images/payment.png" alt="" />
+                    <img src="/assets/imagespayment.png" alt="" />
                   </div>
                 </div>
               </div>

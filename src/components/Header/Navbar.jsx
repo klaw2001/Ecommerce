@@ -28,7 +28,7 @@ const Navbar = () => {
             <div className="offcanvas-header">
               <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
                 <a className="navbar-brand me-5 p-0" href="./Project.html">
-                  <img src="./images/logo.png" alt="" />
+                  <img src="/assets/imageslogo.png" alt="" />
                 </a>
               </h5>
               <form className="d-flex">
