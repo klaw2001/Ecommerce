@@ -1,9 +1,17 @@
 import React from "react";
+import img1 from "../images/overlay/overlay-1.png";
+import img2 from "../images/overlay/overlay-2.png";
+import img3 from "../images/overlay/overlay-3.png";
+import { Link } from "react-router-dom";
 
 const productsRecommendedObj = [
-  { image: "/assets/images/banner-01.jpg" },
-  { image: "/assets/images/banner-02.jpg" },
-  { image: "/assets/images/banner-03.jpg" },
+  {
+    image: img1,
+    title: "Awaken Your Senses with our Exquisite Incense Sticks",
+    path: "/shop",
+  },
+  { image: img2, title: "Discover the Power of Aroma Oils", path: "/shop" },
+  { image: img3, title: "Explore More Products", path: "/shop" },
 ];
 
 const ProductsRecommended = () => {
@@ -13,13 +21,28 @@ const ProductsRecommended = () => {
         {productsRecommendedObj.map((item, index) => (
           <div className="col-md-4" key={index}>
             <div className="mt-5 banner">
-              <a href="#">
-                <img src={item.image} className="h-100 w-100" alt="" />
-                <div className="overlay1"></div>
-                <div className="overlay2"></div>
-                <div className="overlay3"></div>
-                <div className="overlay4"></div>
-              </a>
+              <Link to={item.path}>
+                <div>
+                  <div className="position-relative">
+                    <img src={item.image} className="h-100 w-100" alt="" />
+                    {/* <div
+                      className={`recom-text position-absolute ${
+                        index === 2
+                          ? "recom-center"
+                          : index === 1
+                          ? "recom-left"
+                          : "recom-center-left"
+                      }`}
+                    >
+                      <h2>{item.title}</h2>
+                    </div> */}
+                  </div>
+                  <div className="overlay1"></div>
+                  <div className="overlay2"></div>
+                  <div className="overlay3"></div>
+                  <div className="overlay4"></div>
+                </div>
+              </Link>
             </div>
           </div>
         ))}

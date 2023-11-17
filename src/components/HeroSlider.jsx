@@ -1,83 +1,59 @@
-import React from "react";
-
-const HeroSlider = () => {
+import Carousel from "react-bootstrap/Carousel";
+// import ExampleCarouselImage from 'components/ExampleCarouselImage';
+import car1 from "../images/aroma-smoke-two.png";
+import { Container } from "react-bootstrap";
+import "../new.css";
+function UncontrolledExample() {
   return (
     <>
-      <div className="container-fluid mt-5 m-0 p-0">
-        <div
-          id="carouselExampleFade"
-          className="carousel slide carousel-fade"
-          data-bs-ride="carousel"
-        >
-          <div className="carousel-inner position-relative">
-            <div className="carousel-item active carousel-bg">
-              <div className="container position-absolute content">
-                <div className="text-black text-capitalize">
-                  <h5 className="text-uppercase animation">
-                    Discover 100% Organic
-                  </h5>
-                  <h1 className="display-1 animation-1">
-                    DRY FRUITS
-                    <p className="fw-bold">UP TO 75% OFF</p>
-                  </h1>
-                  <a
-                    href="#"
-                    className="btn rounded-pill carouselbtn animation-2"
-                  >
-                    SHOP NOW
-                  </a>
-                </div>
+      {/* <Container> */}
+
+      <Carousel interval={null}>
+        <Carousel.Item className="car-bg-2">
+          <Container>
+            
+            <div className="d-flex justify-content-center align-items-center">
+              <div className="car-text text-center middle-slider">
+                <h1 className="fs-1 fw-bold">30% Off on Your First Order</h1>
+                <button className="car-btn rounded-pill bg-warning p-2 px-3 border-0 mt-3">
+                  Shop Now
+                </button>
               </div>
             </div>
-            <div className="carousel-item carousel-bg2">
-              <div className="container position-absolute content">
-                <div className="text-black text-capitalize">
-                  <h5 className="text-uppercase animation">
-                    No sugar zero calories
-                  </h5>
-                  <h1 className="display-1 animation-1">
-                    ORGANIC
-                    <p className="fw-bold">ICED TEA</p>
-                  </h1>
-                  <a
-                    href="#"
-                    className="btn rounded-pill carouselbtn animation-2"
-                  >
-                    SHOP NOW
-                  </a>
-                </div>
+          </Container>
+        </Carousel.Item>
+        <Carousel.Item className="car-bg-1">
+          <Container>
+          <div className="d-flex justify-content-around align-items-center">
+              <img src={car1} alt="" className="" width={500} />
+              <div className="car-text">
+                <p className="text-uppercase">Say No To Tobacoo</p>
+                <h1 className="fs-1 fw-bold">Aroma Smoke</h1>
+                <button className="car-btn rounded-pill bg-warning p-2 px-3 border-0 mt-3">
+                  Shop Now
+                </button>
               </div>
             </div>
-          </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleFade"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleFade"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-      
+          </Container>
+        </Carousel.Item>
+        <Carousel.Item className="car-bg-3">
+          <Container>
+            <div className="d-flex justify-content-around align-items-center">
+              <img src={car1} alt="" className="" width={500} />
+              <div className="car-text">
+                <p className="text-uppercase">Say No To Tobacoo</p>
+                <h1 className="fs-1 fw-bold">Aroma Smoke</h1>
+                <button className="car-btn rounded-pill bg-warning p-2 px-3 border-0 mt-3">
+                  Shop Now
+                </button>
+              </div>
+            </div>
+          </Container>
+        </Carousel.Item>
+      </Carousel>
+      {/* </Container> */}
     </>
   );
-};
+}
 
-export default HeroSlider;
+export default UncontrolledExample;

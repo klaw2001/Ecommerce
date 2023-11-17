@@ -1,0 +1,33 @@
+.car-bg-1 {
+    background-image: url(images/car-bg-1.jpg);
+    background-size: cover;
+}
+
+.car-bg-2 {
+    background-image: url(images/slider3.png);
+    background-size: cover;
+}
+
+.car-bg-3 {
+    background-image: url(images/slider2.jpg);
+    background-size: cover;
+}
+
+.carousel-control-next-icon {
+    background-image: url('data:image/svg+xml,<%3Fxml version="1.0" %3F><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><svg fill="%23000000" width="800px" height="800px" viewBox="0 0 512 512" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><path d="M214.78,478l-20.67-21.57L403.27,256,194.11,55.57,214.78,34,446.46,256ZM317.89,256,86.22,34,65.54,55.57,274.7,256,65.54,456.43,86.22,478Z"/></svg>') !important;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23000000' width='800px' height='800px' viewBox='0 0 512 512' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath d='M297.2,478l20.7-21.6L108.7,256L317.9,55.6L297.2,34L65.5,256L297.2,478z M194.1,256L425.8,34l20.7,21.6L237.3,256l209.2,200.4L425.8,478L194.1,256z'/%3E%3C/svg%3E") !important;
+}
+
+.middle-slider {
+    padding: 148px 0px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 9px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #83bc2e;
+}
