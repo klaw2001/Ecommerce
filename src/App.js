@@ -9,6 +9,7 @@ import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import NavbarX from "./components/Header/NavbarX";
 import Topbar from "./components/Header/TopBar";
+import About from "./components/About";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
         {/* Add more routes here */}
       </Routes>
       <Footer />

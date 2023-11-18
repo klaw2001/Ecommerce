@@ -1,3 +1,50 @@
+.heading-small-global {
+    color: #83bc2e;
+}
+
+.global-heading {
+    color: #194A33;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.global-para {
+    color: #194A33;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+button.global-btn {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 14px;
+    letter-spacing: 0px;
+    fill: #000;
+    color: #000;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #8CBC4F;
+    background-color: transparent;
+    transition: all ease .3s;
+    padding: 15px 30px;
+}
+
+button.global-btn:hover {
+    background-color: #8CBC4F;
+    color: #fff;
+    transition: all ease .3s;
+}
+.text-color{
+    color: #194A33;
+}
+.grey-color{
+    color: #86938D;
+}
+
 .car-bg-1 {
     background-image: url(images/car-bg-1.jpg);
     background-size: cover;
@@ -30,4 +77,13 @@
     height: 8px;
     border-radius: 50%;
     background-color: #83bc2e;
+}
+
+.other-hero-wrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0.592), rgba(0, 0, 0, 0.652)), url(images/about-bg.jpg);
+    background-size: cover;
+    padding: 150px 0px;
+}
+.about-card h5{
+    font-size: 18px;
 }
