@@ -3,7 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "../../images/Logo 1.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 function NavbarX() {
   return (
     <Navbar expand="lg" className="bg-transparent">
@@ -14,11 +14,36 @@ function NavbarX() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
-            <NavLink to="/" className='px-3 text-decoration-none text-dark fw-bold'>Home</NavLink>
-            <NavLink to="/about" className='px-3 text-decoration-none text-dark fw-bold'>About</NavLink>
-            <NavLink to="/shop" className='px-3 text-decoration-none text-dark fw-bold'>Shop</NavLink>
-            <NavLink to="/blog" className='px-3 text-decoration-none text-dark fw-bold'>Blog</NavLink>
-            <NavLink to="/contact" className='px-3 text-decoration-none text-dark fw-bold'>Contact</NavLink>
+            <NavLink
+              to="/"
+              className="px-3 text-decoration-none text-dark fw-bold"
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/about"
+              className="px-3 text-decoration-none text-dark fw-bold"
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/shop"
+              className="px-3 text-decoration-none text-dark fw-bold"
+            >
+              Shop
+            </NavLink>
+            <NavLink
+              to="/blog"
+              className="px-3 text-decoration-none text-dark fw-bold"
+            >
+              Blog
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className="px-3 text-decoration-none text-dark fw-bold"
+            >
+              Contact
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
         <div>
@@ -33,10 +58,10 @@ function NavbarX() {
                 type="button"
                 className="btn position-relative navicon shadow-none p-0 "
               >
-                <i className="bi bi-shuffle text-decoration-none position-relative"></i>
-                <span className="position-absolute top-100 start-100 translate-middle px-1 bg-danger rounded-circle text-white">
-                  3<span className="visually-hidden">New alerts</span>
-                </span>
+                  <i className="bi bi-shuffle text-decoration-none position-relative"></i>
+                  <span className="position-absolute top-100 start-100 translate-middle px-1 bg-danger rounded-circle text-white">
+                    3<span className="visually-hidden">New alerts</span>
+                  </span>
               </button>
             </li>
             <li className="nav_icon navbtn icon-hover">
@@ -55,10 +80,13 @@ function NavbarX() {
                 type="button"
                 className="btn position-relative navicon shadow-none p-0"
               >
+                <Link to='/cart'>
+
                 <i className="bi bi-handbag text-decoration-none"></i>
                 <span className="position-absolute top-100 start-100 translate-middle px-1 bg-danger rounded-circle text-white">
                   3<span className="visually-hidden">New alerts</span>
                 </span>
+                </Link>
               </button>
             </li>
             <li className="nav_icon icon-hover">

@@ -5,8 +5,10 @@ const GlobalHero = ({ headingText }) => {
   return (
     <div className="other-hero-wrapper h-75">
       <Container>
-        <div className="other-box d-flex flex-column justify-content-center align-items-center h-75" style={{marginTop:'9rem'}}>
-          <h2 className="text-light global-hero-heading fw-bold">{headingText}</h2>
+        <div className="other-box d-flex flex-column justify-content-center align-items-center mt-5 h-75">
+          <h2 className="text-light global-hero-heading fw-bold">
+            {headingText}
+          </h2>
         </div>
       </Container>
     </div>
