@@ -19,7 +19,7 @@ const Body = () => {
       <NewArrivals />
       <ProductBanner />
       <Testimonial />
-      {/* <OurBlog /> */}
+      <OurBlog />
     </>
   );
 };
