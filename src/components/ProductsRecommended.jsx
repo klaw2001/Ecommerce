@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 const productsRecommendedObj = [
   {
     image: img1,
-    title: "Awaken Your Senses with our Exquisite Incense Sticks",
+    title: "Aroma Agarbatti",
     path: "/shop",
   },
-  { image: img2, title: "Discover the Power of Aroma Oils", path: "/shop" },
+  { image: img2, title: "Aroma Oils", path: "/shop" },
   { image: img3, title: "Explore More Products", path: "/shop" },
 ];
 
@@ -25,17 +25,17 @@ const ProductsRecommended = () => {
                 <div>
                   <div className="position-relative">
                     <img src={item.image} className="h-100 w-100" alt="" />
-                    {/* <div
+                    <div
                       className={`recom-text position-absolute ${
                         index === 2
                           ? "recom-center"
                           : index === 1
-                          ? "recom-left"
-                          : "recom-center-left"
+                          ? "recom-center"
+                          : "recom-center"
                       }`}
                     >
                       <h2>{item.title}</h2>
-                    </div> */}
+                    </div>
                   </div>
                   <div className="overlay1"></div>
                   <div className="overlay2"></div>

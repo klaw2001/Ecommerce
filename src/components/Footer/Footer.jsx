@@ -60,7 +60,7 @@ const Footer = () => {
                   <div className="input-group footerinput mt-5">
                     <input
                       type="text"
-                      className="form-control shadow-none bg-transparent"
+                      className="form-control shadow-none bg-transparent text-white"
                       placeholder="Your email address"
                       aria-label="Your email address"
                       aria-describedby="button-addon2"
@@ -79,7 +79,7 @@ const Footer = () => {
             </div>
 
             <FooterColumn colLg="col-lg-3" title="ABOUT US">
-              <p className="mb-0">M-F 9am-5pm EST</p>
+              <p className="mb-0 abttext">M-F 9am-5pm EST</p>
               <ContactInfo
                 iconClass="bi bi-geo-alt"
                 text="Fox Mountain Rd, South Fork, CO 81154, USA"
@@ -162,11 +162,10 @@ const Footer = () => {
                 <div className="d-flex mb-2">
                   <div className="copyright">
                     <p>
-                      Copyright 2021 ©
+                    © Copyright 2023 | Design By {" "}
                       <a href="#" className="text-decoration-none copytext">
-                        HasThemes .
+                       Hrishikesh Netke
                       </a>
-                      All Rights Reserved
                     </p>
                   </div>
                   <div className="payment">

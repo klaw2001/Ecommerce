@@ -10,7 +10,7 @@ import { HiMail } from "react-icons/hi";
 import { IoCall } from "react-icons/io5";
 const Topbar = () => {
   return (
-    <div className="top-bar-wrapper bg-secondary py-2">
+    <div className="top-bar-wrapper bgclass py-2">
       <Container>
         <Row className="row-cols-1 row-cols-lg-2 align-items0-center">
           <Col>

@@ -18,6 +18,10 @@
   font-size: 13px;
 }
 
+.bgclass {
+  background-color: #9acd32;
+}
+
 .cross {
   right: 10px;
   bottom: 4px;
@@ -304,6 +308,14 @@
   background-size: cover;
 }
 /* For the center position */
+
+.recom-text h2{
+color: white;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-weight: 600;
+font-size: 26px;
+}
+
 .recom-center {
   top: 50%;
   left: 50%;
@@ -1005,12 +1017,16 @@ img.hoverimg {
   color: #9d9d9d;
 }
 
+.footerinput{
+  padding-right: 80px;
+}
+
 .footerinput input {
   height: 47px;
+  width: 200px;
   border: 1px solid #fff;
   background: transparent;
-  color: #b1b1b1;
-  padding: 10px 120px 10px 30px;
+  padding: 10px 30px 10px 30px;
   font-size: 14px;
   border-radius: 30px;
 }
@@ -1082,6 +1098,10 @@ img.hoverimg {
   transform: translateX(10px);
 }
 
+.abttext {
+  color: #9d9d9d !important;
+}
+
 .listtext a {
   color: #9d9d9d !important;
   transition: all 0.3s !important;
@@ -1114,7 +1134,7 @@ img.hoverimg {
 
 .copyright p {
   color: #fff;
-  font-size: 13px;
+  font-size: 14px;
   margin-right: 60px;
 }
 

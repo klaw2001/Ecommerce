@@ -48,16 +48,21 @@ button.global-btn:hover {
 .car-bg-1 {
     background-image: url(images/car-bg-1.jpg);
     background-size: cover;
+    height: 450px;
 }
 
 .car-bg-2 {
     background-image: url(images/slider3.png);
     background-size: cover;
+    height: 450px;
+
 }
 
 .car-bg-3 {
-    background-image: url(images/slider2.jpg);
+    background-image: url(images/carouselimg.jpg);
     background-size: cover;
+    height: 450px;
+
 }
 
 .carousel-control-next-icon {
