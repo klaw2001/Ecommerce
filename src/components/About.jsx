@@ -2,6 +2,7 @@ import React from 'react'
 import GlobalHero from './HeroSections/GlobalHero'
 import AboutPageSection from './AboutPage/AboutPageSection'
 import AboutPageCards from './AboutPage/AboutPageCards'
+import AboutVideo from './AboutPage/AboutVideo'
 
 const About = () => {
   return (
@@ -9,6 +10,7 @@ const About = () => {
         <GlobalHero headingText='About'/>
         <AboutPageSection/>
         <AboutPageCards/>
+        <AboutVideo/>
     </>
   )
 }
