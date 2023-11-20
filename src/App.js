@@ -10,6 +10,7 @@ import Contact from "./components/Contact";
 import NavbarX from "./components/Header/NavbarX";
 import Topbar from "./components/Header/TopBar";
 import About from "./components/About";
+import SingleProduct from "./components/Products/SingleProduct";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path="/single-product/:product_id" element={<SingleProduct />} />
         {/* Add more routes here */}
       </Routes>
       <Footer />

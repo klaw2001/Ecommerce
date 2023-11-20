@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const productCards = [
   {
@@ -79,69 +80,78 @@ const ProdcutCard = () => {
   return (
     <>
       {productCards.map((product) => (
+          <Link to={"/single-product/" + product.id}>
         <div className="col" key={product.id}>
-          <div className="card">
-            <div className="position-relative cardimg">
-              <a href="#">
-                <img src={product.image1} className="card-img-top po abc" alt={product.title} />
-                {product.discount && (
-                  <span className="badge bg-danger position-absolute">
-                    {product.discount}
-                  </span>
-                )}
-                {product.badge && (
-                  <span className="badge bg-success position-absolute">
-                    {product.badge}
-                  </span>
-                )}
-              </a>
-              <div className="producticon">
-                <a href="#" className="icon text-decoration-none shadow-sm">
-                  <i className="bi bi-suit-heart"></i>
+            <div className="card">
+              <div className="position-relative cardimg">
+                <a href="#">
+                  <img
+                    src={product.image1}
+                    className="card-img-top po abc"
+                    alt={product.title}
+                  />
+                  {product.discount && (
+                    <span className="badge bg-danger position-absolute">
+                      {product.discount}
+                    </span>
+                  )}
+                  {product.badge && (
+                    <span className="badge bg-success position-absolute">
+                      {product.badge}
+                    </span>
+                  )}
                 </a>
-                <a href="#" className="icon1 text-decoration-none shadow-sm">
-                  <i className="bi bi-arrow-repeat"></i>
-                </a>
-                <a
-                  href="#"
-                  className="icon2 text-decoration-none shadow-sm"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
-                >
-                  <i className="bi bi-search"></i>
-                </a>
-                <a href="#" className="icon3 text-decoration-none shadow-sm">
-                  <i className="bi bi-handbag"></i>
-                </a>
-              </div>
-            </div>
-            <div className="card-body producttext">
-              <h6>{product.title}</h6>
-              <div className="text-center">
-                <div className="text">
-                  <p>
-                    <a href="#" className="text-decoration-none text-secondary">
-                      {product.studioDesign}
-                    </a>
-                  </p>
+                <div className="producticon">
+                  <a href="#" className="icon text-decoration-none shadow-sm">
+                    <i className="bi bi-suit-heart"></i>
+                  </a>
+                  <a href="#" className="icon1 text-decoration-none shadow-sm">
+                    <i className="bi bi-arrow-repeat"></i>
+                  </a>
+                  <a
+                    href="#"
+                    className="icon2 text-decoration-none shadow-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    <i className="bi bi-search"></i>
+                  </a>
+                  <a href="#" className="icon3 text-decoration-none shadow-sm">
+                    <i className="bi bi-handbag"></i>
+                  </a>
                 </div>
-                {product.price1 && (
-                  <div className="d-flex justify-content-center">
-                    <p className="text-secondary text-decoration-line-through">
-                      {product.price1}
+              </div>
+              <div className="card-body producttext">
+                <h6>{product.title}</h6>
+                <div className="text-center">
+                  <div className="text">
+                    <p>
+                      <a
+                        href="#"
+                        className="text-decoration-none text-secondary"
+                      >
+                        {product.studioDesign}
+                      </a>
                     </p>
-                    <span className="ps-2">{product.price2}</span>
                   </div>
-                )}
-                {product.price && (
-                  <div className="d-flex justify-content-center">
-                    <span className="ps-2 pb-2">{product.price}</span>
-                  </div>
-                )}
+                  {product.price1 && (
+                    <div className="d-flex justify-content-center">
+                      <p className="text-secondary text-decoration-line-through">
+                        {product.price1}
+                      </p>
+                      <span className="ps-2">{product.price2}</span>
+                    </div>
+                  )}
+                  {product.price && (
+                    <div className="d-flex justify-content-center">
+                      <span className="ps-2 pb-2">{product.price}</span>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
         </div>
+          </Link>
       ))}
     </>
   );
