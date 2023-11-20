@@ -1,6 +1,7 @@
 import React from "react";
 import HeaderTop from "../components/HeaderTop";
 import RightSidebar from "./RightSidebar";
+import GlobalHero from "./HeroSections/GlobalHero";
 
 const Blog = () => {
   const blogPosts = [
@@ -94,8 +95,9 @@ const Blog = () => {
 
   return (
     <>
-      <HeaderTop />
-      <div className="pagebg">
+      {/* <HeaderTop /> */}
+      <GlobalHero headingText="Blog" />
+      {/* <div className="pagebg">
         <div className="container">
           <div className="pagebanner">
             <nav
@@ -110,7 +112,8 @@ const Blog = () => {
             </nav>
           </div>
         </div>
-      </div>
+      </div> */}
+
       <div className="pt-5">
         <div className="container">
           <div className="row justify-content-between">

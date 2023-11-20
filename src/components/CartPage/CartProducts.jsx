@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button, Form } from "react-bootstrap";
 
 const CartProducts = () => {
+  const [quantity, setQuantity] = useState(1);
+
+  const handleIncrement = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
   const cartItems = [
     {
       image: "/assets/images/product-03.jpg",
@@ -40,7 +52,7 @@ const CartProducts = () => {
     },
   ];
   return (
-    <div className="cart-products" >
+    <div className="cart-products">
       {cartItems.map((elem, ind) => (
         <div className="cart-product d-flex align-items-center" key={ind}>
           <div className="cart-img-div">
@@ -55,7 +67,37 @@ const CartProducts = () => {
             <div className="box-1-div">
               <h5>{elem.name}</h5>
               <p>{elem.size}</p>
-              <span className="fw-bold">{elem.totalPrice}</span>
+              <div className="d-flex justify-content-between align-items-center">
+                <Form>
+                  <Form.Group controlId="quantityCounter">
+                    {/* <Form.Label>Quantity</Form.Label> */}
+                    <div className="d-flex">
+                      <Button
+                        variant="outline-secondary"
+                        onClick={handleDecrement}
+                      >
+                        -
+                      </Button>
+                      <Form.Control
+                        type="number"
+                        value={quantity}
+                        readOnly
+                        className="text-center mx-2 w-25"
+                      />
+                      <Button
+                        variant="outline-secondary"
+                        onClick={handleIncrement}
+                      >
+                        +
+                      </Button>
+                    </div>
+                  </Form.Group>
+                </Form>
+                <span className="fw-bold">{elem.totalPrice}</span>
+                <span>
+                  <i className="bi bi-trash3"></i>
+                </span>
+              </div>
             </div>
           </div>
         </div>

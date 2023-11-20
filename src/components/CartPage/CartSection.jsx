@@ -1,6 +1,7 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import CartProducts from "./CartProducts";
+import CartForm from "./CartFrom";
 
 const CartSection = () => {
   return (
@@ -35,41 +36,56 @@ const CartSection = () => {
               </div>
             </div>
             <div className="calculate">
-              <h4 className="title">Add Your Shipping Adress</h4>
-              <div className="cartform">
-                <form action="#" className="mt-5">
-                  <select className="form-select" style={{ height: "50px" }}>
-                    <option selected className="bg-secondary text-white">
-                      Select a country.
-                    </option>
-                    {/* Add more options here */}
-                  </select>
-                  <div className="mt-4">
-                    <select className="form-select" style={{ height: "50px" }}>
-                      <option selected className="bg-secondary text-white">
-                        Select an option.
-                      </option>
-                      {/* Add more options here */}
-                    </select>
-                  </div>
-                  <div className="mt-4">
-                    <input
+              <h4 className="title">Add Your Shipping Address</h4>
+              {/* <div className="cartform">
+                <Form className="mt-5">
+                  <Form.Group controlId="formName">
+                    <Form.Label className="mt-2">Name</Form.Label>
+                    <Form.Control type="text" placeholder="Enter your name" />
+                  </Form.Group>
+
+                  <Form.Group controlId="formAddress">
+                    <Form.Label className="mt-2">Address</Form.Label>
+                    <Form.Control
                       type="text"
-                      className="form-control"
-                      placeholder="Postcode/ziip"
-                      style={{ height: "50px" }}
+                      placeholder="Enter your address"
                     />
-                  </div>
+                  </Form.Group>
+
+                  <Form.Group controlId="formPhoneNumber">
+                    <Form.Label className="mt-2">Phone Number</Form.Label>
+                    <Form.Control
+                      type="tel"
+                      placeholder="Enter your phone number"
+                    />
+                  </Form.Group>
+
+                  <Form.Group controlId="formState">
+                    <Form.Label className="mt-2">State</Form.Label>
+                    <Form.Control type="text" placeholder="Enter your state" />
+                  </Form.Group>
+
+                  <Form.Group controlId="formCity">
+                    <Form.Label className="mt-2">City</Form.Label>
+                    <Form.Control type="text" placeholder="Enter your city" />
+                  </Form.Group>
+
+                  <Form.Group controlId="formPincode">
+                    <Form.Label className="mt-2">Pincode</Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="Enter your pincode"
+                    />
+                  </Form.Group>
+
                   <div className="ship-btn mt-4">
-                    <a
-                      href="#"
-                      className="text-decoration-none btn rounded-pill"
-                    >
+                    <Button variant="primary" type="submit">
                       UPDATE TOTALS
-                    </a>
+                    </Button>
                   </div>
-                </form>
-              </div>
+                </Form>
+              </div> */}
+              <CartForm/>
             </div>
           </Col>
           <Col className="position-relative">
