@@ -1,5 +1,6 @@
 import React from "react";
 import HeaderTop from "./HeaderTop";
+import GlobalHero from "./HeroSections/GlobalHero";
 
 const Contact = () => {
   const BreadcrumbItem = ({ text }) => (
@@ -18,8 +19,9 @@ const Contact = () => {
 
   return (
     <>
-      <HeaderTop />
-      <div className="pagebg">
+    <GlobalHero headingText='Contact'/>
+      {/* <HeaderTop /> */}
+      {/* <div className="pagebg">
         <div className="container">
           <div className="pagebanner">
             <nav
@@ -34,7 +36,7 @@ const Contact = () => {
             </nav>
           </div>
         </div>
-      </div>
+      </div> */}
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.416543666887!2d72.8260746144345!3d19.039208357075694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c63090aaadb7%3A0x84f1711d775b8d18!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1676271208742!5m2!1sen!2sin"
         width="100%"

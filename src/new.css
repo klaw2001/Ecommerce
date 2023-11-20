@@ -38,10 +38,12 @@ button.global-btn:hover {
     color: #fff;
     transition: all ease .3s;
 }
-.text-color{
+
+.text-color {
     color: #194A33;
 }
-.grey-color{
+
+.grey-color {
     color: #86938D;
 }
 
@@ -89,6 +91,12 @@ button.global-btn:hover {
     background-size: cover;
     padding: 150px 0px;
 }
-.about-card h5{
+
+.about-card h5 {
     font-size: 18px;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: none !important;
 }
