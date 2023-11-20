@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img1 from "../../images/shop-single-01.jpg";
 import img2 from "../../images/shop-single-02.jpg";
 import img3 from "../../images/shop-single-003.jpg";
@@ -8,8 +8,17 @@ import pro1 from "../../images/product-1.jpg";
 import pro2 from "../../images/product-01.jpg";
 import pro3 from "../../images/product-05.jpg";
 import pro4 from "../../images/shop-single-04.jpg";
-import { Button, Col, Image, Tab, Tabs } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { getSingleProduct } from "../../redux/products/Action";
+import { useParams } from "react-router-dom";
 const SingleProduct = () => {
+  const { product_id } = useParams()
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(getSingleProduct(product_id))
+  },[dispatch])
+  const sinProduct = useSelector((state)=>state.productsArr.product)
+  console.log(sinProduct)
   return (
     <div className="pt-5">
       <div className="container">
@@ -23,7 +32,7 @@ const SingleProduct = () => {
                   role="tabpanel"
                 >
                   <img
-                    src={img1}
+                    src={`http://localhost:8000/uploads/products/${sinProduct.images[1]}`}
                     alt=""
                     className="w-100 h-100"
                     style={{ width: "570px" }}
@@ -38,7 +47,7 @@ const SingleProduct = () => {
                   role="tabpanel"
                 >
                   <img
-                    src={img2}
+                    src={`http://localhost:8000/uploads/products/${sinProduct.images[2]}`}
                     alt=""
                     className="w-100 h-100"
                     style={{ width: "570px" }}
@@ -53,7 +62,7 @@ const SingleProduct = () => {
                   role="tabpanel"
                 >
                   <img
-                    src={img3}
+                    src={`http://localhost:8000/uploads/products/${sinProduct.images[3]}`}
                     alt=""
                     className="w-100 h-100"
                     style={{ width: "570px" }}
@@ -68,7 +77,7 @@ const SingleProduct = () => {
                   role="tabpanel"
                 >
                   <img
-                    src={img4}
+                    src={`http://localhost:8000/uploads/products/${sinProduct.images[4]}`}
                     alt=""
                     className="w-100 h-100"
                     style={{ width: "570px" }}
@@ -93,7 +102,7 @@ const SingleProduct = () => {
                     type="button"
                     role="tab"
                   >
-                    <img src={pro1} alt="" style={{ width: "90px" }} />
+                    <img src={`http://localhost:8000/uploads/products/${sinProduct.images[1]}`} alt="" style={{ width: "90px" }} />
                   </button>
                 </li>
                 <li className="nav-item fruits-bar me-4" role="presentation">
@@ -105,7 +114,7 @@ const SingleProduct = () => {
                     type="button"
                     role="tab"
                   >
-                    <img src={pro2} alt="" style={{ width: "90px" }} />
+                    <img src={`http://localhost:8000/uploads/products/${sinProduct.images[2]}`} alt="" style={{ width: "90px" }} />
                   </button>
                 </li>
                 <li className="nav-item fruits-bar me-4" role="presentation">
@@ -117,7 +126,7 @@ const SingleProduct = () => {
                     type="button"
                     role="tab"
                   >
-                    <img src={pro3} alt="" style={{ width: "90px" }} />
+                    <img src={`http://localhost:8000/uploads/products/${sinProduct.images[3]}`} alt="" style={{ width: "90px" }} />
                   </button>
                 </li>
                 <li className="nav-item fruits-bar me-4" role="presentation">
@@ -129,7 +138,7 @@ const SingleProduct = () => {
                     type="button"
                     role="tab"
                   >
-                    <img src={pro4} alt="" style={{ width: "90px" }} />
+                    <img src={`http://localhost:8000/uploads/products/${sinProduct.images[4]}`} alt="" style={{ width: "90px" }} />
                   </button>
                 </li>
                 <li className="nav-item mt-4">
