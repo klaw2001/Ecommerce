@@ -16,6 +16,8 @@ const productsRecommendedObj = [
 
 const ProductsRecommended = () => {
   return (
+    <div className="pt-2 pb-5 mb-5">
+
     <div className="container">
       <div className="row d-flex py-5 ">
         {productsRecommendedObj.map((item, index) => (
@@ -25,16 +27,8 @@ const ProductsRecommended = () => {
                 <div>
                   <div className="position-relative">
                     <img src={item.image} className="h-100 w-100" alt="" />
-                    <div
-                      className={`recom-text position-absolute ${
-                        index === 2
-                          ? "recom-center"
-                          : index === 1
-                          ? "recom-center"
-                          : "recom-center"
-                      }`}
-                    >
-                      <h2>{item.title}</h2>
+                    <div className="recom-text position-absolute recom-center">
+                      <h4 className="mb-0 w-100 text-white">{item.title}</h4>
                     </div>
                   </div>
                   <div className="overlay1"></div>
@@ -47,6 +41,7 @@ const ProductsRecommended = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

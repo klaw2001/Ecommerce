@@ -57,23 +57,24 @@ const Footer = () => {
                   <p className="m-0">
                     Sign up for our e-mail to get the latest news.
                   </p>
-                  <div className="input-group footerinput mt-5">
-                    <input
-                      type="text"
-                      className="form-control shadow-none bg-transparent text-white"
-                      placeholder="Your email address"
-                      aria-label="Your email address"
-                      aria-describedby="button-addon2"
-                    />
-                    <a
-                      href="#"
-                      className="btn btn-outline-secondary"
-                      type="button"
-                      id="button-addon2"
-                    >
-                      SIGN UP
-                    </a>
-                  </div>
+                  <form
+                  action="#"
+                  className="d-flex align-items-center position-relative mt-5"
+                >
+                  <input
+                    type="email"
+                    className="form-control rounded-pill"
+                    placeholder="Enter your email address"
+                    style={{ height: "50px", width: "70%" }}
+                  />
+
+                  <button
+                    className="global-btn rounded-pill border-0"
+                    style={{ position: "absolute", right: "160px" }}
+                  >
+                    Sign Up
+                  </button>
+                </form>
                 </div>
               </div>
             </div>
@@ -163,7 +164,7 @@ const Footer = () => {
                   <div className="copyright">
                     <p>
                     © Copyright 2023 | Design By {" "}
-                      <a href="#" className="text-decoration-none copytext">
+                      <a href="https://hrishikeshnetke.in" className="text-decoration-none copytext">
                        Hrishikesh Netke
                       </a>
                     </p>

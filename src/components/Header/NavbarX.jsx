@@ -1,7 +1,6 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "../../images/Logo 1.png";
 import { Link, NavLink } from "react-router-dom";
 function NavbarX() {
@@ -53,18 +52,7 @@ function NavbarX() {
                 <i className="bi bi-search text-decoration-none"></i>
               </a>
             </li>
-            <li className="nav_icon navbtn">
-              <button
-                type="button"
-                className="btn position-relative navicon shadow-none p-0 "
-              >
-                  <i className="bi bi-shuffle text-decoration-none position-relative"></i>
-                  <span className="position-absolute top-100 start-100 translate-middle px-1 bg-danger rounded-circle text-white">
-                    3<span className="visually-hidden">New alerts</span>
-                  </span>
-              </button>
-            </li>
-            <li className="nav_icon navbtn icon-hover">
+            {/* <li className="nav_icon navbtn icon-hover">
               <button
                 type="button"
                 className="btn position-relative navicon shadow-none p-0"
@@ -74,7 +62,7 @@ function NavbarX() {
                   3<span className="visually-hidden">New alerts</span>
                 </span>
               </button>
-            </li>
+            </li> */}
             <li className="nav_icon navbtn icon-hover">
               <button
                 type="button"

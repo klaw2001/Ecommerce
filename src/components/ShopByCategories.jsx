@@ -1,45 +1,60 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import HorizontalRule from "./HorizontalRule";
+import { useDispatch, useSelector } from "react-redux";
+import { getCategory } from "../redux/category/Action";
+import Spinner from "react-bootstrap/Spinner";
+import img1 from '../images/categories/1.png'
+import img2 from '../images/categories/2.png'
+import img3 from '../images/categories/3.png'
+import img4 from '../images/categories/4.png'
+import img5 from '../images/categories/5.png'
+import img6 from '../images/categories/6.png'
 const categories = [
   {
     id: 1,
-    image: "/assets/images/category-1.png",
-    alt: "Fruits",
-    title: "Fruits",
+    image: img1,
+    alt: "Tea",
+    title: "Tea",
   },
   {
     id: 2,
-    image: "/assets/images/category-2.png",
-    alt: "Flour",
-    title: "Flour",
+    image:img2,
+    alt: "Food",
+    title: "Food",
   },
   {
     id: 3,
-    image: "/assets/images/category-3.png",
-    alt: "Vegetables",
-    title: "Vegetables",
+    image: img3,
+    alt: "Freshners",
+    title: "Freshners",
   },
   {
     id: 4,
-    image: "/assets/images/category-4.png",
-    alt: "Meat",
-    title: "Meat",
+    image: img4,
+    alt: "Oil",
+    title: "Oil",
   },
   {
     id: 5,
-    image: "/assets/images/category-5.png",
-    alt: "Milk & Eggs",
-    title: "Milk & Eggs",
+    image: img5,
+    alt: "Soap",
+    title: "Soap",
   },
   {
     id: 6,
-    image: "/assets/images/category-6.png",
-    alt: "Jam",
-    title: "Jam",
+    image: img6,
+    alt: "Teeth",
+    title: "Teeth",
   },
 ];
 
 const ShopByCategories = () => {
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(getCategory());
+  // }, [dispatch]);
+
+  // const categories = useSelector((state) => state.categories.categories);
   return (
     <div className="container mb-5">
       <div className="row">
@@ -48,28 +63,33 @@ const ShopByCategories = () => {
             <i>Shop By Categories</i>
           </h3>
           <h2 className="fw-bolder mb-3">FEATURED CATEGORIES</h2>
-          <p>
-            <img src="/assets/images/hr.webp" alt="Horizontal Rule" />
-          </p>
+          <HorizontalRule />
         </div>
       </div>
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 d-flex justify-content-center">
-        {categories.map((category) => (
-          <div key={category.id} className="col mt-3 p-0">
-            <div className="card border-0">
-              <img
-                src={category.image}
-                className="card-img-top categoryimg"
-                alt={category.alt}
-                style={{ width: "170px" }}
-              />
-              <div className="text-center mt-4 card-text">
-                <h6>{category.title}</h6>
+      {categories && categories.length > 0 ? (
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 d-flex justify-content-center">
+          {categories.map((category) => (
+            <div key={category.id} className="col mt-3 p-0">
+              <div className="card border-0 text-center">
+                <img
+                  src={category.image}
+                  className="card-img-top categoryimg m-auto"
+                  alt={category.alt}
+                  style={{ width: "170px" }}
+                />
+                <div className="text-center mt-4 card-text">
+                  <h6>{category.title}</h6>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      ) : (
+        <div className="d-flex justify-content-center align-items-center py-5">
+
+          <Spinner animation="border" variant="success" />
+        </div>
+      )}
     </div>
   );
 };

@@ -21,11 +21,11 @@ export const getSingleProduct = (productID) => {
     axios
       .get(`http://localhost:8000/products/get-single-product/${productID}`)
       .then((res) => {
-        console.log(res);
+        console.log(res , productID);
         dispatch({ type: "GET_SINPRODUCT_SUCCESS", payload: res.data.data });
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err , productID);
         dispatch({ type: "GET_SINPRODUCT_FAILED", payload: err.message });
       });
   };

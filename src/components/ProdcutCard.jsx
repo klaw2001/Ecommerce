@@ -87,28 +87,30 @@ const ProdcutCard = () => {
   console.log(productCards);
   return (
     <>
-      {productCards.map((product) => (
-        <Link to={"/single-product/" + product._id}>
-          <div className="col" key={product._id}>
+      {productCards.map((product, ind) => (
+        <Link
+          to={"/single-product/" + product._id}
+          key={ind}
+          className="text-decoration-none"
+        >
+          <div className="col" key={ind}>
             <div className="card">
               <div className="position-relative cardimg">
-                <a href="#">
-                  <img
-                    src={product.image1}
-                    className="card-img-top po abc"
-                    alt={product.title}
-                  />
-                  {product.discount && (
-                    <span className="badge bg-danger position-absolute">
-                      {product.discount}
-                    </span>
-                  )}
-                  {product.badge && (
-                    <span className="badge bg-success position-absolute">
-                      {product.badge}
-                    </span>
-                  )}
-                </a>
+                <img
+                  src={`http://localhost:8000/uploads/products/${product.thumbnail}`}
+                  className=" po abc"
+                  alt={product.name}
+                />
+                {product.discount && (
+                  <span className="badge bg-danger position-absolute">
+                    {product.discount}
+                  </span>
+                )}
+                {product.badge && (
+                  <span className="badge bg-success position-absolute">
+                    {product.badge}
+                  </span>
+                )}
                 <div className="producticon">
                   <a href="#" className="icon text-decoration-none shadow-sm">
                     <i className="bi bi-suit-heart"></i>
@@ -124,37 +126,50 @@ const ProdcutCard = () => {
                   >
                     <i className="bi bi-search"></i>
                   </a>
-                  <a href="#" className="icon3 text-decoration-none shadow-sm">
+                  <Link
+                    to={"/cart/" + product._id}
+                    className="icon3 text-decoration-none shadow-sm"
+                  >
                     <i className="bi bi-handbag"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
-              <div className="card-body producttext">
-                <h6>{product.title}</h6>
+              <div className="card-body producttext text-center d-flex justify-content-between align-items-center">
                 <div className="text-center">
+                  <h6>{product.name}</h6>
                   <div className="text">
                     <p>
                       <a
                         href="#"
                         className="text-decoration-none text-secondary"
                       >
-                        {product.studioDesign}
+                        {product.categories.name}
                       </a>
                     </p>
                   </div>
-                  {product.price1 && (
-                    <div className="d-flex justify-content-center">
-                      <p className="text-secondary text-decoration-line-through">
-                        {product.price1}
-                      </p>
-                      <span className="ps-2">{product.price2}</span>
-                    </div>
-                  )}
-                  {product.price && (
-                    <div className="d-flex justify-content-center">
-                      <span className="ps-2 pb-2">{product.price}</span>
-                    </div>
-                  )}
+                  <div>
+                    {product.saleprice ? (
+                      <div className="d-flex justify-content-center">
+                        <p className="text-secondary text-decoration-line-through">
+                          ₹{product.price}
+                        </p>
+                        <span className="ps-2">₹{product.saleprice}</span>
+                      </div>
+                    ) : (
+                      <div className="d-flex justify-content-start">
+                        <span className="ps-2 pb-2">₹{product.price}</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                <div className="" >
+                <Link
+                    to={"/cart/" + product._id}
+                    className="icon3 text-decoration-none shadow-sm rounded-circle text-white"
+                    style={{    padding: '9px 12px',backgroundColor:'#83bc2e'}}
+                  >
+                    <i className="bi bi-handbag"></i>
+                  </Link>
                 </div>
               </div>
             </div>

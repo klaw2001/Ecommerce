@@ -13,11 +13,12 @@ import { getSingleProduct } from "../../redux/products/Action";
 import { useParams } from "react-router-dom";
 const SingleProduct = () => {
   const { product_id } = useParams()
+  console.log(product_id)
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(getSingleProduct(product_id))
-  },[dispatch])
-  const sinProduct = useSelector((state)=>state.productsArr.product)
+  },[])
+  const sinProduct = useSelector((state)=>state.productsArr)
   console.log(sinProduct)
   return (
     <div className="pt-5">

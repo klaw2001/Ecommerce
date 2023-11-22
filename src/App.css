@@ -317,10 +317,12 @@ font-size: 26px;
 }
 
 .recom-center {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  right: 0;
   text-align: center;
+  z-index: 1;
+  background: #194A33;
+  padding: 6px 0px;
 }
 
 /* For the left position */
@@ -432,13 +434,13 @@ img.hoverimg {
   opacity: 0;
 }
 
-.cardimg:hover img {
+/* .cardimg:hover img {
   opacity: 0;
 }
 
 .cardimg1:hover img {
   opacity: 1;
-}
+} */
 
 .cardimg:hover .hoverimg {
   opacity: 1;
@@ -783,10 +785,12 @@ img.hoverimg {
 /* Discount Section  */
 
 .discountbg {
-  background-image: url(../public/assets/images/countdown-bg.jpg);
+  background:linear-gradient(rgba(0, 0, 0, 0.395),rgba(0, 0, 0, 0.395)), url(images/count-bg.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+
 }
 
 .section {

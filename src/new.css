@@ -22,27 +22,30 @@
     line-height: 22px;
 }
 
-button.global-btn {
+.global-btn {
     font-size: 14px;
     font-weight: 600;
     text-transform: capitalize;
     line-height: 14px;
     letter-spacing: 0px;
     fill: #000;
-    color: #000;
+    color: #fff;
     border-style: solid;
     border-width: 1px 1px 1px 1px;
     border-radius: 5px 5px 5px 5px;
     border: 1px solid #8CBC4F;
-    background-color: transparent;
+    background-color: #8CBC4F;
     transition: all ease .3s;
     padding: 15px 30px;
+    text-decoration: none;
 }
 
-button.global-btn:hover {
-    background-color: #8CBC4F;
+.global-btn:hover {
+    background-color: #000;
     color: #fff;
     transition: all ease .3s;
+    border: 1px solid transparent;
+
 }
 
 .text-color {
@@ -86,8 +89,8 @@ button.global-btn:hover {
 }
 
 .carousel-indicators [data-bs-target] {
-    width: 9px;
-    height: 8px;
+    width: 9px !important;
+    height: 8px !important;
     border-radius: 50%;
     background-color: #83bc2e;
 }
@@ -105,4 +108,8 @@ button.global-btn:hover {
 input:focus,
 textarea:focus {
     box-shadow: none !important;
+}
+
+.column{
+    background: url(images/oil\ sticker\ NEW.jpg);
 }

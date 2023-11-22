@@ -4,15 +4,14 @@ const ProductBanner = () => {
   return (
     <div className="container-fluid section discountbg mt-5">
       <div className="container">
-        <div className="row justify-content-end">
-          <div className="col-md-6 col-sm-7">
-            <div className="textcontent">
-              <h3 className="fw-light">
-                <i>Natural Product</i>
-              </h3>
-              <h1>SAVE 40% OFF</h1>
-              <p>Broccoli roses, always fresh and delicious. 100% Organic</p>
-              <div className="d-flex mt-5">
+        <div className="row justify-content-center">
+         
+          <div className="col-md-6 col-sm-7 text-center">
+            <div className="textcontent text-center">
+             
+              <h1>Deal of the Day</h1>
+              <p className="w-100 mw-100">Make a Wonderful Presence Today with our Aroma Tea</p>
+              <div className="d-flex mt-5 justify-content-center">
                 <div className="box p-1 me-4">
                   <h4 className="mb-0">
                     <span>648</span>
@@ -39,9 +38,9 @@ const ProductBanner = () => {
                 </div>
               </div>
               <div className="discountbtn pt-5">
-                <a href="#" className="btn countbtn bg-white rounded-pill">
+                <button className="global-btn">
                   SHOP NOW
-                </a>
+                </button>
               </div>
             </div>
           </div>

@@ -11,6 +11,7 @@ import NavbarX from "./components/Header/NavbarX";
 import Topbar from "./components/Header/TopBar";
 import About from "./components/About";
 import SingleProduct from "./components/Products/SingleProduct";
+import Shop from "./components/Shop";
 
 function App() {
   return (
@@ -22,10 +23,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Body />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart/:cart_id" element={<Cart />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path="/shop" element={<Shop />} />
         <Route path="/single-product/:product_id" element={<SingleProduct />} />
         {/* Add more routes here */}
       </Routes>
