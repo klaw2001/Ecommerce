@@ -3,7 +3,19 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../../images/Logo 1.png";
 import { Link, NavLink } from "react-router-dom";
+import { useFirebase } from "../../context/Firebase";
+import { Dropdown } from "react-bootstrap";
 function NavbarX() {
+  const {currentUser , signOut} = useFirebase();
+  const handleSignOut = () => {
+    signOut()
+      .then(() => {
+        console.log('User signed out successfully');
+      })
+      .catch((error) => {
+        console.error('Error signing out:', error);
+      });
+  };
   return (
     <Navbar expand="lg" className="bg-transparent">
       <Container>
@@ -52,35 +64,44 @@ function NavbarX() {
                 <i className="bi bi-search text-decoration-none"></i>
               </a>
             </li>
-            {/* <li className="nav_icon navbtn icon-hover">
-              <button
-                type="button"
-                className="btn position-relative navicon shadow-none p-0"
-              >
-                <i className="bi bi-heart text-decoration-none"></i>
-                <span className="position-absolute top-100 start-100 translate-middle px-1 bg-danger rounded-circle text-white">
-                  3<span className="visually-hidden">New alerts</span>
-                </span>
-              </button>
-            </li> */}
+           
             <li className="nav_icon navbtn icon-hover">
               <button
                 type="button"
                 className="btn position-relative navicon shadow-none p-0"
               >
-                <Link to='/cart'>
-
-                <i className="bi bi-handbag text-decoration-none"></i>
-                <span className="position-absolute top-100 start-100 translate-middle px-1 bg-danger rounded-circle text-white">
-                  3<span className="visually-hidden">New alerts</span>
-                </span>
+                <Link to="/cart">
+                  <i className="bi bi-handbag text-decoration-none"></i>
+                  <span className="position-absolute top-100 start-100 translate-middle px-1 bg-danger rounded-circle text-white">
+                    3<span className="visually-hidden">New alerts</span>
+                  </span>
                 </Link>
               </button>
             </li>
             <li className="nav_icon icon-hover">
-              <a to="#">
-                <i className="bi bi-gear text-decoration-none"></i>
-              </a>
+              <Dropdown>
+                <Dropdown.Toggle variant="transparent" id="dropdown-basic">
+                  <i className="bi bi-gear text-decoration-none"></i>
+                </Dropdown.Toggle>
+
+                {currentUser ? (
+                  <Dropdown.Menu>
+                    <Dropdown.Item href="#action">
+                      {currentUser.email}
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <Link to="/login" onClick={handleSignOut}>Logout</Link>
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                ) : (
+                  <Dropdown.Menu>
+                    <Dropdown.Item>
+                      {" "}
+                      <Link to="/login">Login</Link>
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                )}
+              </Dropdown>
             </li>
           </ul>
         </div>
