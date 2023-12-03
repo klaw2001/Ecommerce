@@ -6,14 +6,16 @@ import { Link, NavLink } from "react-router-dom";
 import { useFirebase } from "../../context/Firebase";
 import { Dropdown } from "react-bootstrap";
 function NavbarX() {
-  const {currentUser , signOut} = useFirebase();
+  const { signOut } = useFirebase();
+  const currentUser = JSON.parse(localStorage.getItem("user"));
+  
   const handleSignOut = () => {
     signOut()
       .then(() => {
-        console.log('User signed out successfully');
+        console.log("User signed out successfully");
       })
       .catch((error) => {
-        console.error('Error signing out:', error);
+        console.error("Error signing out:", error);
       });
   };
   return (
@@ -64,7 +66,7 @@ function NavbarX() {
                 <i className="bi bi-search text-decoration-none"></i>
               </a>
             </li>
-           
+
             <li className="nav_icon navbtn icon-hover">
               <button
                 type="button"
@@ -87,10 +89,12 @@ function NavbarX() {
                 {currentUser ? (
                   <Dropdown.Menu>
                     <Dropdown.Item href="#action">
-                      {currentUser.email}
+                      {currentUser.user.email}
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <Link to="/login" onClick={handleSignOut}>Logout</Link>
+                      <Link to="/login" onClick={handleSignOut}>
+                        Logout
+                      </Link>
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 ) : (

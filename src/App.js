@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
-import { getAuth , onAuthStateChanged } from "firebase/auth";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Body from "./components/Body/Body";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
@@ -16,19 +21,11 @@ import Shop from "./components/Shop";
 import Signin from "./components/Login/Signin";
 import Signup from "./components/Login/Signup";
 import { app } from "./firebase";
-const auth = getAuth(app)
+import { ToastContainer } from "react-toastify";
+import AddProduct from "./components/Products/AddProduct";
+const auth = getAuth(app);
 
 function App() {
-  
-  // useEffect(()=>{
-  //   onAuthStateChanged(auth,user=>{
-  //     if(user){
-  //       console.log('Hello User',user)
-  //     }else{
-  //       console.log('Yout Are Logged Out')
-  //     }
-  //   })
-  // },[])
   return (
     <Router>
       <header className="bg-transparent">
@@ -40,11 +37,12 @@ function App() {
         <Route path="/login" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/cart/:cart_id" element={<Cart />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/add-product" element={<AddProduct />} />
         <Route path="/single-product/:product_id" element={<SingleProduct />} />
         {/* Add more routes here */}
       </Routes>
